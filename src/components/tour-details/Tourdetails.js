@@ -475,6 +475,27 @@ const Tourdetails = () => {
                       salePrice="$499"
                       promotionText="sale"
                       />
+                       <TourCard
+                      imageUrl="https://images.freeimages.com/images/large-previews/1a0/sydney-opera-house-1476036.jpg" // Replace with your image URL
+                      title="Tour 1"
+                      description="Explore amazing destinations with our guided tours."
+                      discountPrice="$599"
+                      salePrice="$499"
+                      promotionText="sale"
+                      />
+                       <TourCard
+                      imageUrl="https://images.freeimages.com/images/large-previews/1a0/sydney-opera-house-1476036.jpg" // Replace with your image URL
+                      title="Tour 1"
+                      description="Explore amazing destinations with our guided tours."
+                      discountPrice="$599"
+                      salePrice="$499"
+                      promotionText="sale"
+                      />
+                </div>
+                {/* Product cards */}
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
+              
+                     
                       
                 </div>
                 </>
