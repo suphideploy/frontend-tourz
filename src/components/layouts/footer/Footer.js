@@ -7,8 +7,8 @@ import TTT from '@/public/assets/ttt.png';
 import styles from '@/src/styles/footerStyles.module.css';
 const Footer = () => {
     return (
-        <footer className="footer">
-        <div className="container">
+        <footer className="footer flex items-center  ">
+        <div className="container   ">
         <div className="row">
             <div className="footer-col">
               <h4>Tours from Phuket</h4>

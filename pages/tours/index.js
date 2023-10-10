@@ -1,20 +1,25 @@
-import React from "react"
+import React from 'react'
 import Layout from "@/src/components/layouts";
 import { GET_MENUS } from "@/src/queries/get-menus";
-import { ApolloProvider } from "@apollo/client";
+
 import client from "@/src/apollo/client";
+import Tourdetails from '@/src/components/tour-details/Tourdetails';
 
-
-export default function About( {data}) {
-    return (
-        <Layout data={data}>
-            <div>About Us</div>
+function Toureetails({data}) {
+  return (
+    <div>
+       <Layout data={data}>
+       <div className=" ">
+           <Tourdetails />
+        </div>
         </Layout>
             
-       
-       
-    )
+    </div>
+  )
 }
+
+
+export default Toureetails
 export async function getStaticProps(context){
     const {data, loadng, networkStatus} = await client.query({
   
