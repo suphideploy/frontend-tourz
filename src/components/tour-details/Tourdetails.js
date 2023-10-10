@@ -37,7 +37,7 @@ const Tourdetails = () => {
       <section className="py-6">
         <div className="container mx-auto">
           <div className="flex flex-wrap">
-            <aside className="w-full md:w-1/4 px-0 border">
+            <aside className="w-full md:w-1/4 px-0">
              {/*
   Heads up! 👋
 
@@ -52,7 +52,7 @@ const Tourdetails = () => {
     <summary
       className="flex cursor-pointer items-center justify-between gap-2 bg-white p-4 text-gray-900 transition"
     >
-      <span className="text-sm font-medium"> Availability </span>
+      <span className="text-sm font-medium"> Sea Tour Categories </span>
 
       <span className="transition group-open:-rotate-180">
         <svg
@@ -94,7 +94,7 @@ const Tourdetails = () => {
             />
 
             <span className="text-sm font-medium text-gray-700">
-              In Stock (5+)
+              Phi Phi Islands
             </span>
           </label>
         </li>
@@ -108,7 +108,7 @@ const Tourdetails = () => {
             />
 
             <span className="text-sm font-medium text-gray-700">
-              Pre Order (3+)
+              James Bond Island Tours
             </span>
           </label>
         </li>
@@ -122,14 +122,120 @@ const Tourdetails = () => {
             />
 
             <span className="text-sm font-medium text-gray-700">
-              Out of Stock (10+)
+              Khai Islands Tours
+            </span>
+          </label>
+        </li>
+        <li>
+          <label htmlFor="FilterOutOfStock" className="inline-flex items-center gap-2">
+            <input
+              type="checkbox"
+              id="FilterOutOfStock"
+              className="h-5 w-5 rounded border-gray-300"
+            />
+
+            <span className="text-sm font-medium text-gray-700">
+             Racha & Coral Island Tours
             </span>
           </label>
         </li>
       </ul>
     </div>
   </details>
+  <details
+    className="overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden"
+  >
+    <summary
+      className="flex cursor-pointer items-center justify-between gap-2 bg-white p-4 text-gray-900 transition"
+    >
+      <span className="text-sm font-medium"> Time of Day </span>
 
+      <span className="transition group-open:-rotate-180">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="currentColor"
+          className="h-4 w-4"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+      </span>
+    </summary>
+
+    <div className="border-t border-gray-200 bg-white">
+      <header className="flex items-center justify-between p-4">
+        <span className="text-sm text-gray-700"> 0 Selected </span>
+
+        <button
+          type="button"
+          className="text-sm text-gray-900 underline underline-offset-4"
+        >
+          Reset
+        </button>
+      </header>
+
+      <ul className="space-y-1 border-t border-gray-200 p-4">
+        <li>
+          <label htmlFor="FilterInStock" className="inline-flex items-center gap-2">
+            <input
+              type="checkbox"
+              id="FilterInStock"
+              className="h-5 w-5 rounded border-gray-300"
+            />
+
+            <span className="text-sm font-medium text-gray-700">
+              Morning
+            </span>
+            <span className="text-sm font-medium text-gray-400">
+              Starts before 12pm
+            </span>
+            
+          </label>
+        </li>
+
+        <li>
+          <label htmlFor="FilterPreOrder" className="inline-flex items-center gap-2">
+            <input
+              type="checkbox"
+              id="FilterPreOrder"
+              className="h-5 w-5 rounded border-gray-300"
+            />
+
+            <span className="text-sm font-medium text-gray-700">
+              Afternoon
+            </span>
+            <span className="text-sm font-medium text-gray-400">
+              Starts after 12pm
+            </span> 
+          </label>
+        </li>
+
+        <li>
+          <label htmlFor="FilterOutOfStock" className="inline-flex items-center gap-2">
+            <input
+              type="checkbox"
+              id="FilterOutOfStock"
+              className="h-5 w-5 rounded border-gray-300"
+            />
+
+            <span className="text-sm font-medium text-gray-700">
+              Evening and night
+            </span>
+            <span className="text-sm font-medium text-gray-400">
+              Starts after 5pm
+            </span> 
+          </label>
+        </li>
+        
+      </ul>
+    </div>
+  </details>
   <details
     className="overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden"
   >
@@ -195,6 +301,103 @@ const Tourdetails = () => {
       </div>
     </div>
   </details>
+  <details
+    className="overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden"
+  >
+    <summary
+      className="flex cursor-pointer items-center justify-between gap-2 bg-white p-4 text-gray-900 transition"
+    >
+      <span className="text-sm font-medium"> Duration </span>
+
+      <span className="transition group-open:-rotate-180">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="currentColor"
+          className="h-4 w-4"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+      </span>
+    </summary>
+
+    <div className="border-t border-gray-200 bg-white">
+      <header className="flex items-center justify-between p-4">
+        <span className="text-sm text-gray-700"> 0 Selected </span>
+
+        <button
+          type="button"
+          className="text-sm text-gray-900 underline underline-offset-4"
+        >
+          Reset
+        </button>
+      </header>
+
+      <ul className="space-y-1 border-t border-gray-200 p-4">
+        <li>
+          <label htmlFor="FilterInStock" className="inline-flex items-center gap-2">
+            <input
+              type="checkbox"
+              id="FilterInStock"
+              className="h-5 w-5 rounded border-gray-300"
+            />
+
+            <span className="text-sm font-medium text-gray-700">
+              Up to 1 hour
+            </span>        
+          </label>
+        </li>
+
+        <li>
+          <label htmlFor="FilterPreOrder" className="inline-flex items-center gap-2">
+            <input
+              type="checkbox"
+              id="FilterPreOrder"
+              className="h-5 w-5 rounded border-gray-300"
+            />
+
+            <span className="text-sm font-medium text-gray-700">
+              1 to 4 hours
+            </span> 
+          </label>
+        </li>
+
+        <li>
+          <label htmlFor="FilterOutOfStock" className="inline-flex items-center gap-2">
+            <input
+              type="checkbox"
+              id="FilterOutOfStock"
+              className="h-5 w-5 rounded border-gray-300"
+            />
+
+            <span className="text-sm font-medium text-gray-700">
+              1 to 3 days
+            </span> 
+          </label>
+        </li>
+
+        <li>
+          <label htmlFor="FilterOutOfStock" className="inline-flex items-center gap-2">
+            <input
+              type="checkbox"
+              id="FilterOutOfStock"
+              className="h-5 w-5 rounded border-gray-300"
+            />
+
+            <span className="text-sm font-medium text-gray-700">
+              3+ days
+            </span> 
+          </label>
+        </li>
+      </ul>
+    </div>
+  </details>
 </div>
             </aside>
 
@@ -212,7 +415,7 @@ const Tourdetails = () => {
                   <div className="flex items-center space-x-2">
                         <a
                           href="#"
-                          className="bg-white border border-gray-300 px-3 py-2 rounded-md hover:bg-gray-100"
+                          className="bg-white border border-gray-300 px-3 py-3 rounded-md hover:bg-gray-100"
                           data-toggle="tooltip"
                           title="List view"
                         >
@@ -220,7 +423,7 @@ const Tourdetails = () => {
                         </a>
                         <a
                           href="#"
-                          className="bg-white border border-gray-300 px-3 py-2 rounded-md hover:bg-gray-100 active:bg-gray-200"
+                          className="bg-white border border-gray-300 px-3 py-3 rounded-md hover:bg-gray-100 active:bg-gray-200"
                           data-toggle="tooltip"
                           title="Grid view"
                         >
