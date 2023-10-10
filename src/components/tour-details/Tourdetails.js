@@ -1,18 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import TourCard from "@/src/components/card/TourCard";
 import {BiSolidGrid} from 'react-icons/bi';
 import { BiListUl } from 'react-icons/bi';
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 const Tourdetails = () => {
+  const [isListView, setIsListView] = useState(true);
+
+  const toggleView = () => {
+    setIsListView(!isListView);
+  };
+
+  
   return (
     <>
-      <section className="bg-gray-300 py-5 ">
-        <div className="container mx-auto w-full">
+      <section className="py-5 bg-gray-300 ">
+        <div className="container w-full mx-auto">
           <h2 className="text-2xl font-semibold">Category products</h2>
           <nav>
           
-            <ol className="breadcrumb text-black flex items-center space-x-2">
+            <ol className="flex items-center space-x-2 text-black breadcrumb">
               <li className="breadcrumb-item">
                 <a href="#">Home</a>
               </li>
@@ -37,7 +44,7 @@ const Tourdetails = () => {
       <section className="py-6">
         <div className="container mx-auto">
           <div className="flex flex-wrap">
-            <aside className="w-full md:w-1/4 px-0">
+            <aside className="w-full px-0 md:w-1/4">
              {/*
   Heads up! 👋
 
@@ -50,7 +57,7 @@ const Tourdetails = () => {
     className="overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden"
   >
     <summary
-      className="flex cursor-pointer items-center justify-between gap-2 bg-white p-4 text-gray-900 transition"
+      className="flex items-center justify-between gap-2 p-4 text-gray-900 transition bg-white cursor-pointer"
     >
       <span className="text-sm font-medium"> Sea Tour Categories </span>
 
@@ -61,7 +68,7 @@ const Tourdetails = () => {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="h-4 w-4"
+          className="w-4 h-4"
         >
           <path
             strokeLinecap="round"
@@ -72,7 +79,7 @@ const Tourdetails = () => {
       </span>
     </summary>
 
-    <div className="border-t border-gray-200 bg-white">
+    <div className="bg-white border-t border-gray-200">
       <header className="flex items-center justify-between p-4">
         <span className="text-sm text-gray-700"> 0 Selected </span>
 
@@ -84,13 +91,13 @@ const Tourdetails = () => {
         </button>
       </header>
 
-      <ul className="space-y-1 border-t border-gray-200 p-4">
+      <ul className="p-4 space-y-1 border-t border-gray-200">
         <li>
           <label htmlFor="FilterInStock" className="inline-flex items-center gap-2">
             <input
               type="checkbox"
               id="FilterInStock"
-              className="h-5 w-5 rounded border-gray-300"
+              className="w-5 h-5 border-gray-300 rounded"
             />
 
             <span className="text-sm font-medium text-gray-700">
@@ -104,7 +111,7 @@ const Tourdetails = () => {
             <input
               type="checkbox"
               id="FilterPreOrder"
-              className="h-5 w-5 rounded border-gray-300"
+              className="w-5 h-5 border-gray-300 rounded"
             />
 
             <span className="text-sm font-medium text-gray-700">
@@ -118,7 +125,7 @@ const Tourdetails = () => {
             <input
               type="checkbox"
               id="FilterOutOfStock"
-              className="h-5 w-5 rounded border-gray-300"
+              className="w-5 h-5 border-gray-300 rounded"
             />
 
             <span className="text-sm font-medium text-gray-700">
@@ -131,7 +138,7 @@ const Tourdetails = () => {
             <input
               type="checkbox"
               id="FilterOutOfStock"
-              className="h-5 w-5 rounded border-gray-300"
+              className="w-5 h-5 border-gray-300 rounded"
             />
 
             <span className="text-sm font-medium text-gray-700">
@@ -146,7 +153,7 @@ const Tourdetails = () => {
     className="overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden"
   >
     <summary
-      className="flex cursor-pointer items-center justify-between gap-2 bg-white p-4 text-gray-900 transition"
+      className="flex items-center justify-between gap-2 p-4 text-gray-900 transition bg-white cursor-pointer"
     >
       <span className="text-sm font-medium"> Time of Day </span>
 
@@ -157,7 +164,7 @@ const Tourdetails = () => {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="h-4 w-4"
+          className="w-4 h-4"
         >
           <path
             strokeLinecap="round"
@@ -168,7 +175,7 @@ const Tourdetails = () => {
       </span>
     </summary>
 
-    <div className="border-t border-gray-200 bg-white">
+    <div className="bg-white border-t border-gray-200">
       <header className="flex items-center justify-between p-4">
         <span className="text-sm text-gray-700"> 0 Selected </span>
 
@@ -180,13 +187,13 @@ const Tourdetails = () => {
         </button>
       </header>
 
-      <ul className="space-y-1 border-t border-gray-200 p-4">
+      <ul className="p-4 space-y-1 border-t border-gray-200">
         <li>
           <label htmlFor="FilterInStock" className="inline-flex items-center gap-2">
             <input
               type="checkbox"
               id="FilterInStock"
-              className="h-5 w-5 rounded border-gray-300"
+              className="w-5 h-5 border-gray-300 rounded"
             />
 
             <span className="text-sm font-medium text-gray-700">
@@ -204,7 +211,7 @@ const Tourdetails = () => {
             <input
               type="checkbox"
               id="FilterPreOrder"
-              className="h-5 w-5 rounded border-gray-300"
+              className="w-5 h-5 border-gray-300 rounded"
             />
 
             <span className="text-sm font-medium text-gray-700">
@@ -221,7 +228,7 @@ const Tourdetails = () => {
             <input
               type="checkbox"
               id="FilterOutOfStock"
-              className="h-5 w-5 rounded border-gray-300"
+              className="w-5 h-5 border-gray-300 rounded"
             />
 
             <span className="text-sm font-medium text-gray-700">
@@ -240,7 +247,7 @@ const Tourdetails = () => {
     className="overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden"
   >
     <summary
-      className="flex cursor-pointer items-center justify-between gap-2 bg-white p-4 text-gray-900 transition"
+      className="flex items-center justify-between gap-2 p-4 text-gray-900 transition bg-white cursor-pointer"
     >
       <span className="text-sm font-medium"> Price </span>
 
@@ -251,7 +258,7 @@ const Tourdetails = () => {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="h-4 w-4"
+          className="w-4 h-4"
         >
           <path
             strokeLinecap="round"
@@ -262,7 +269,7 @@ const Tourdetails = () => {
       </span>
     </summary>
 
-    <div className="border-t border-gray-200 bg-white">
+    <div className="bg-white border-t border-gray-200">
       <header className="flex items-center justify-between p-4">
         <span className="text-sm text-gray-700"> The highest price is $600 </span>
 
@@ -274,7 +281,7 @@ const Tourdetails = () => {
         </button>
       </header>
 
-      <div className="border-t border-gray-200 p-4">
+      <div className="p-4 border-t border-gray-200">
         <div className="flex justify-between gap-4">
           <label htmlFor="FilterPriceFrom" className="flex items-center gap-2">
             <span className="text-sm text-gray-600">$</span>
@@ -283,7 +290,7 @@ const Tourdetails = () => {
               type="number"
               id="FilterPriceFrom"
               placeholder="From"
-              className="w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
+              className="w-full border-gray-200 rounded-md shadow-sm sm:text-sm"
             />
           </label>
 
@@ -294,7 +301,7 @@ const Tourdetails = () => {
               type="number"
               id="FilterPriceTo"
               placeholder="To"
-              className="w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
+              className="w-full border-gray-200 rounded-md shadow-sm sm:text-sm"
             />
           </label>
         </div>
@@ -305,7 +312,7 @@ const Tourdetails = () => {
     className="overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden"
   >
     <summary
-      className="flex cursor-pointer items-center justify-between gap-2 bg-white p-4 text-gray-900 transition"
+      className="flex items-center justify-between gap-2 p-4 text-gray-900 transition bg-white cursor-pointer"
     >
       <span className="text-sm font-medium"> Duration </span>
 
@@ -316,7 +323,7 @@ const Tourdetails = () => {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="h-4 w-4"
+          className="w-4 h-4"
         >
           <path
             strokeLinecap="round"
@@ -327,7 +334,7 @@ const Tourdetails = () => {
       </span>
     </summary>
 
-    <div className="border-t border-gray-200 bg-white">
+    <div className="bg-white border-t border-gray-200">
       <header className="flex items-center justify-between p-4">
         <span className="text-sm text-gray-700"> 0 Selected </span>
 
@@ -339,13 +346,13 @@ const Tourdetails = () => {
         </button>
       </header>
 
-      <ul className="space-y-1 border-t border-gray-200 p-4">
+      <ul className="p-4 space-y-1 border-t border-gray-200">
         <li>
           <label htmlFor="FilterInStock" className="inline-flex items-center gap-2">
             <input
               type="checkbox"
               id="FilterInStock"
-              className="h-5 w-5 rounded border-gray-300"
+              className="w-5 h-5 border-gray-300 rounded"
             />
 
             <span className="text-sm font-medium text-gray-700">
@@ -359,7 +366,7 @@ const Tourdetails = () => {
             <input
               type="checkbox"
               id="FilterPreOrder"
-              className="h-5 w-5 rounded border-gray-300"
+              className="w-5 h-5 border-gray-300 rounded"
             />
 
             <span className="text-sm font-medium text-gray-700">
@@ -373,7 +380,7 @@ const Tourdetails = () => {
             <input
               type="checkbox"
               id="FilterOutOfStock"
-              className="h-5 w-5 rounded border-gray-300"
+              className="w-5 h-5 border-gray-300 rounded"
             />
 
             <span className="text-sm font-medium text-gray-700">
@@ -387,7 +394,7 @@ const Tourdetails = () => {
             <input
               type="checkbox"
               id="FilterOutOfStock"
-              className="h-5 w-5 rounded border-gray-300"
+              className="w-5 h-5 border-gray-300 rounded"
             />
 
             <span className="text-sm font-medium text-gray-700">
@@ -401,8 +408,8 @@ const Tourdetails = () => {
 </div>
             </aside>
 
-            <main className="w-full md:w-3/4 px-4">
-              <header className="border-b mb-4 pb-3 flex justify-between items-center">
+            <main className="w-full px-4 md:w-3/4">
+              <header className="flex items-center justify-between pb-3 mb-4 border-b">
                  <span>32 Items found</span>
                 <div className="flex items-center space-x-2">
                  
@@ -413,28 +420,53 @@ const Tourdetails = () => {
                     <option>Cheapest</option>
                   </select>
                   <div className="flex items-center space-x-2">
-                        <a
+                  <a
                           href="#"
-                          className="bg-white border border-gray-300 px-3 py-3 rounded-md hover:bg-gray-100"
+                          className="px-3 py-3 bg-white border border-gray-300 rounded-md hover:bg-gray-100"
                           data-toggle="tooltip"
                           title="List view"
+                          onClick={toggleView}
                         >
-                          <BiListUl className="text-gray-500" />
+                           {isListView ? <BiListUl /> : <BiSolidGrid />}
                         </a>
-                        <a
+                        {/*<a
                           href="#"
-                          className="bg-white border border-gray-300 px-3 py-3 rounded-md hover:bg-gray-100 active:bg-gray-200"
+                          className="px-3 py-3 bg-white border border-gray-300 rounded-md hover:bg-gray-100 active:bg-gray-200"
                           data-toggle="tooltip"
                           title="Grid view"
+                          onClick={toggleView}
                         >
-                          <BiSolidGrid className="text-gray-500" />
-                        </a>
+                           {isListView ?  <BiSolidGrid /> : <BiSolidGrid/>}
+                         </a>*/}
+                        
+                       
+                       
                       </div>
                 </div>
               </header>
+              
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 ">
+          <div className={isListView ? 'list-view' : 'grid-view'}>
+          {/* Product cards */}
+          {isListView ? (
+            
+            <div className="p-4 bg-white rounded-lg shadow-md">
+            <TourCard
+              imageUrl="https://images.freeimages.com/images/large-previews/1a0/sydney-opera-house-1476036.jpg"
+              title="Tour 1"
+              description="Explore amazing destinations with our guided tours."
+              discountPrice="$599"
+              salePrice="$499"
+              promotionText="sale"
+            />
+            </div>
+         
+          ) : (
+            <>
+            
                 {/* Product cards */}
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
+              
                       <TourCard
                       imageUrl="https://images.freeimages.com/images/large-previews/1a0/sydney-opera-house-1476036.jpg" // Replace with your image URL
                       title="Tour 1"
@@ -443,32 +475,11 @@ const Tourdetails = () => {
                       salePrice="$499"
                       promotionText="sale"
                       />
-                      <TourCard
-                      imageUrl="https://images.freeimages.com/images/large-previews/1a0/sydney-opera-house-1476036.jpg" // Replace with your image URL
-                      title="Tour 1"
-                      description="Explore amazing destinations with our guided tours."
-                      discountPrice="$599"
-                      salePrice="$499"
-                      promotionText="Recommand"
-                      />
-                      <TourCard
-                      imageUrl="https://images.freeimages.com/images/large-previews/1a0/sydney-opera-house-1476036.jpg" // Replace with your image URL
-                      title="Tour 1"
-                      description="Explore amazing destinations with our guided tours."
-                      discountPrice="$599"
-                      salePrice="$499"
-                      promotionText="new"
-                      />
-                       <TourCard
-                      imageUrl="https://images.freeimages.com/images/large-previews/1a0/sydney-opera-house-1476036.jpg" // Replace with your image URL
-                      title="Tour 1"
-                      description="Explore amazing destinations with our guided tours."
-                      discountPrice="$599"
-                      salePrice="$499"
-                      promotionText="new"
-                      />
-
-              </div>
+                      
+                </div>
+                </>
+                  )}
+            </div>
 
               <nav class="flex flex-row flex-nowrap justify-between md:justify-center items-center" aria-label="Pagination">
                 <a class="flex w-10 h-10 mr-1 justify-center items-center rounded-full border border-gray-200 bg-white text-black hover:border-gray-300" href="#" title="Previous Page">
@@ -505,6 +516,7 @@ const Tourdetails = () => {
       </section>
     </>
   );
+
 };
 
 export default Tourdetails;
