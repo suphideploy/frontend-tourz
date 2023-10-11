@@ -427,7 +427,7 @@ const Tourdetails = () => {
                           title="List view"
                           onClick={toggleView}
                         >
-                           {isListView ? <BiListUl /> : <BiSolidGrid />}
+                           {isListView ? <BiSolidGrid /> : <BiListUl />}
                         </a>
                         {/*<a
                           href="#"
@@ -446,61 +446,56 @@ const Tourdetails = () => {
               </header>
               
 
-          <div className={isListView ? 'list-view' : 'grid-view'}>
-          {/* Product cards */}
-          {isListView ? (
-            
-            <div className="p-4 bg-white rounded-lg shadow-md">
-            <TourCard
-              imageUrl="https://images.freeimages.com/images/large-previews/1a0/sydney-opera-house-1476036.jpg"
-              title="Tour 1"
-              description="Explore amazing destinations with our guided tours."
-              discountPrice="$599"
-              salePrice="$499"
-              promotionText="sale"
-            />
-            </div>
-         
-          ) : (
-            <>
-            
-                {/* Product cards */}
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
+  <div className={isListView ? 'grid-view' : 'list-view'}>
+  {isListView ? (
+    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
+      {/* Product cards */}
+      <TourCard
+        imageUrl="https://images.freeimages.com/images/large-previews/1a0/sydney-opera-house-1476036.jpg" // Replace with your image URL
+        title="Tour 1"
+        description="Explore amazing destinations with our guided tours."
+        discountPrice="$599"
+        salePrice="$499"
+        promotionText="sale"
+      />
+       <TourCard
+        imageUrl="https://images.freeimages.com/images/large-previews/1a0/sydney-opera-house-1476036.jpg" // Replace with your image URL
+        title="Tour 1"
+        description="Explore amazing destinations with our guided tours."
+        discountPrice="$599"
+        salePrice="$499"
+        promotionText="sale"
+      />
+       <TourCard
+        imageUrl="https://images.freeimages.com/images/large-previews/1a0/sydney-opera-house-1476036.jpg" // Replace with your image URL
+        title="Tour 1"
+        description="Explore amazing destinations with our guided tours."
+        discountPrice="$599"
+        salePrice="$499"
+        promotionText="sale"
+      />
+      {/* Add more TourCard components here if needed */}
+    </div>
+  ) : (
+    <div className="p-4 bg-white rounded-lg shadow-md">
+      {/* Product cards */}
+      <TourCard
+        imageUrl="https://images.freeimages.com/images/large-previews/1a0/sydney-opera-house-1476036.jpg"
+        title="Tour 1"
+        description="Explore amazing destinations with our guided tours."
+        discountPrice="$599"
+        salePrice="$499"
+        promotionText="sale"
+      />
+      {/* Add more TourCard components here if needed */}
+    </div>
+  )}
+</div>
+
               
-                      <TourCard
-                      imageUrl="https://images.freeimages.com/images/large-previews/1a0/sydney-opera-house-1476036.jpg" // Replace with your image URL
-                      title="Tour 1"
-                      description="Explore amazing destinations with our guided tours."
-                      discountPrice="$599"
-                      salePrice="$499"
-                      promotionText="sale"
-                      />
-                       <TourCard
-                      imageUrl="https://images.freeimages.com/images/large-previews/1a0/sydney-opera-house-1476036.jpg" // Replace with your image URL
-                      title="Tour 1"
-                      description="Explore amazing destinations with our guided tours."
-                      discountPrice="$599"
-                      salePrice="$499"
-                      promotionText="sale"
-                      />
-                       <TourCard
-                      imageUrl="https://images.freeimages.com/images/large-previews/1a0/sydney-opera-house-1476036.jpg" // Replace with your image URL
-                      title="Tour 1"
-                      description="Explore amazing destinations with our guided tours."
-                      discountPrice="$599"
-                      salePrice="$499"
-                      promotionText="sale"
-                      />
-                </div>
-                {/* Product cards */}
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
-              
-                     
-                      
-                </div>
-                </>
-                  )}
-            </div>
+               
+                 
+          
 
               <nav class="flex flex-row flex-nowrap justify-between md:justify-center items-center" aria-label="Pagination">
                 <a class="flex w-10 h-10 mr-1 justify-center items-center rounded-full border border-gray-200 bg-white text-black hover:border-gray-300" href="#" title="Previous Page">

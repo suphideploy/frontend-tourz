@@ -1,4 +1,4 @@
-import Nav from '@/src/components/layouts/header/nav';
+import Nav from '@/src/components/layouts/header/navbar';
 //npm install lodash
 import { isEmpty } from 'lodash';
 
