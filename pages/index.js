@@ -11,14 +11,17 @@ import TourSlider from "@/src/components/card/TourSlider";
 import TourDetails from "@/src/components/tourdetails/TourDetails";
 import TourPriceCalculator from "@/src/components/tourcalculate/TourCalculate";
 import TourDetailss from "@/src/components/tourcalculate/TourDetails";
+import Table from "@/src/components/tables/Table";
+import Herobanner from "@/src/components/hero";
 
 //const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({data}) {
 
+
   return (
    <Layout data={data}>
-   
+   <Herobanner />
     <section className="py-16 bg-gray-100">
     
     <div className="two alt-two">
@@ -65,6 +68,7 @@ export default function Home({data}) {
         </div>
         <TourSlider className="px-5" />
       </section>
+      <Table />
       <TourDetails />
       <TourPriceCalculator />
       <TourDetailss />
