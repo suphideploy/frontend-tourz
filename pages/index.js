@@ -13,6 +13,7 @@ import TourPriceCalculator from "@/src/components/tourcalculate/TourCalculate";
 import TourDetailss from "@/src/components/tourcalculate/TourDetails";
 import Table from "@/src/components/tables/Table";
 import Herobanner from "@/src/components/hero";
+import DropdownMenu from "@/src/components/event/DropdownMouseOver";
 
 //const inter = Inter({ subsets: ['latin'] })
 
@@ -81,7 +82,7 @@ export default function Home({data}) {
       <TourPriceCalculator />
       <TourDetailss />
      {/*<BookingForm /> */}
-    
+    <DropdownMenu />
    </Layout>
   )
 }

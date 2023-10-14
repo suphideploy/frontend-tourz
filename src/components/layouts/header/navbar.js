@@ -6,6 +6,15 @@ import { AiOutlineMenu, AiOutlineClose,AiOutlineUp,AiOutlineDown,AiOutlineRight,
 
 
 const Nav = ({ headerMenus }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleMouseOver = () => {
+    setIsOpen(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsOpen(false);
+  };
     if (isEmpty(headerMenus)) {
       return null;
     }
@@ -67,7 +76,7 @@ const Nav = ({ headerMenus }) => {
             <div 
             key={menu.node.id}
             className={`group relative ${
-                hasChildren ? "hover:text-slate-300 cursor-pointer" : ""}` }
+                hasChildren ? "hover:text-blue-500 cursor-pointer" : ""}` }
                 onClick={(e) => {
                     if (hasChildren) {
                       e.stopPropagation();
@@ -105,7 +114,7 @@ const Nav = ({ headerMenus }) => {
              {hasChildren && openSubMenu === menu.node.id && (
             <nav
             tabIndex="0"
-                    className={`border border-2 z-10 bg-white border-red-300 rounded w-60 absolute left-0 top-full transition-all ${
+                    className={`border border-2 z-10 bg-white border-gray-300 rounded w-60 absolute left-0 top-full transition-all ${
                         openSubMenu === menu.node.id ? 'block' : 'hidden'
                     }`}
             
@@ -147,7 +156,7 @@ const Nav = ({ headerMenus }) => {
 
           {/* Conditionally render sub-submenu */}
           {hasSubSubmenu && openSubSubmenu === subItem.node.id && (
-            <ul className="absolute px-2 py-1 mt-2 ml- bg-white border border-gray-300 shadow-md item w-60"  style={{ left: '100%', top: '0' }}>
+            <ul className="absolute px-2 py-1 mt-2 ml-1 bg-white border border-gray-300 shadow-md item w-60"  style={{ left: '100%', top: '0' }}>
               {subItem.node.childItems.edges.map((subSubItem) => (
                 <li
                   key={subSubItem.node.id}
