@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TourCard = ({ imageUrl, title, description, discountPrice, salePrice, promotionText }) => {
+const TourCard = ({ imageUrl, title, description, discountPrice, salePrice, promotionImage }) => {
   return (
 
    
@@ -11,9 +11,10 @@ const TourCard = ({ imageUrl, title, description, discountPrice, salePrice, prom
       <img src={imageUrl} alt={title} className="w-full h-56 object-cover" />
 
       {/* Promotion Badge */}
-      {promotionText && (
-        <div className="absolute top-0 left-0 m-2 px-2 py-1 bg-green-500 text-white rounded">
-          {promotionText}
+      {promotionImage && (
+        <div className="absolute top-0 left-0 m-2 px-2 py-1  text-white rounded">
+          <img src={promotionImage} alt={title} width={64} height={64} />
+
         </div>
       )}
 

@@ -38,7 +38,7 @@ export default function Home({data}) {
         description="Explore amazing destinations with our guided tours."
         discountPrice="$599"
         salePrice="$499"
-        promotionText="sale"
+        promotionImage="/assets/badges/best-seller.png"
       />
         <TourCard
         imageUrl="https://images.freeimages.com/images/large-previews/1a0/sydney-opera-house-1476036.jpg" // Replace with your image URL
@@ -46,7 +46,7 @@ export default function Home({data}) {
         description="Explore amazing destinations with our guided tours."
         discountPrice="$599"
         salePrice="$499"
-        promotionText="Recommand"
+        promotionImage="/assets/badges/new.png"
       />
         <TourCard
         imageUrl="https://images.freeimages.com/images/large-previews/1a0/sydney-opera-house-1476036.jpg" // Replace with your image URL
@@ -54,7 +54,15 @@ export default function Home({data}) {
         description="Explore amazing destinations with our guided tours."
         discountPrice="$599"
         salePrice="$499"
-        promotionText="new"
+        promotionImage="/assets/badges/most-popular.png"
+      />
+        <TourCard
+        imageUrl="https://images.freeimages.com/images/large-previews/1a0/sydney-opera-house-1476036.jpg" // Replace with your image URL
+        title="Tour 1"
+        description="Explore amazing destinations with our guided tours."
+        discountPrice="$599"
+        salePrice="$499"
+        promotionImage="/assets/badges/recommand.png"
       />
       {/* Add more TourCard components with different data */}
       </div>

@@ -21,7 +21,7 @@ const HeaderTop = () => {
           </div>
         </div>
         <div className="text-gray-500 text-[12px]">
-            <b>FREE SHIPPING</b> THIS WEEK ORDER OVER - $55
+          TAKE ONLY <b>MEMORIES</b>,LEAVE ONLY <b>FOOTPRINTS</b>
         </div>
         <div className="flex gap-4">
             <select
