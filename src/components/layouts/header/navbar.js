@@ -8,13 +8,6 @@ import { AiOutlineMenu, AiOutlineClose,AiOutlineUp,AiOutlineDown,AiOutlineRight,
 const Nav = ({ headerMenus }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleMouseOver = () => {
-    setIsOpen(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsOpen(false);
-  };
     if (isEmpty(headerMenus)) {
       return null;
     }
@@ -43,7 +36,21 @@ const Nav = ({ headerMenus }) => {
           setOpenSubMenu(menuId);
         }
       };
+       // Function to handle submenu click
+       const handleSubMouseOut = (menuId, e) => {
+        // Prevent the event from propagating and closing the submenu
+        e.stopPropagation();
     
+        if (openSubMenu === menuId) {
+          // Clicking on the same menu item, close the submenu
+          setOpenSubMenu(null);
+        } else {
+          // Clicking on a different menu item, open its submenu
+          setOpenSubMenu(menuId);
+        }
+      };
+      
+      
       // Function to handle sub-submenu click
       const handleSubSubmenuClick = (subItemId, e) => {
         // Prevent the event from propagating and closing the submenu
@@ -57,6 +64,43 @@ const Nav = ({ headerMenus }) => {
           setOpenSubSubmenu(subItemId);
         }
       };
+
+       // Function to handle sub-submenu click
+       const handleSubSubMouseOut = (subItemId, e) => {
+        // Prevent the event from propagating and closing the submenu
+        e.stopPropagation();
+    
+        if (openSubSubmenu === subItemId) {
+          // Clicking on the same sub-submenu item, close the sub-submenu
+          setOpenSubSubmenu(null);
+        } else {
+          // Clicking on a different sub-submenu item, open its sub-submenu
+          setOpenSubSubmenu(subItemId);
+        }
+      };
+
+     
+      const handleMouseLeave = (menuId) => {
+        if (openSubMenu === menuId) {
+          setOpenSubMenu(null);
+        }
+      };
+      
+      const handleMouseEnter = (menuId) => {
+        setOpenSubMenu(menuId);
+      };
+      const handleSubMouseLeave = (subItemId) => {
+        if (openSubMenu === subItemId) {
+          setOpenSubSubmenu(null);
+        }
+      };
+      
+      const handleSubMouseEnter = (subItemId) => {
+        setOpenSubSubmenu(subItemId);
+      };
+     
+      
+      
       return (
         <div className="hidden lg:block">
         <div className="container z-50">
@@ -77,12 +121,18 @@ const Nav = ({ headerMenus }) => {
             key={menu.node.id}
             className={`group relative ${
                 hasChildren ? "hover:text-blue-500 cursor-pointer" : ""}` }
-                onClick={(e) => {
+                /*onClick={(e) => {
                     if (hasChildren) {
                       e.stopPropagation();
                       handleSubMenuClick(menu.node.id, e);
                     }
                   }}
+                  onMouseOut={(e) => {
+                  
+                    handleSubMouseOut(menu.node.id, e);
+                  }}*/
+                  onMouseLeave={() => handleMouseLeave(menu.node.id)}
+                  onMouseEnter={() => handleMouseEnter(menu.node.id)}
             >
             {hasChildren ? (
             <>
@@ -128,12 +178,18 @@ const Nav = ({ headerMenus }) => {
                         className={`block px-4 py-2 ${
                           hasSubSubmenu ? "hover:bg-red-300" : ""
                         }`}
-                        onClick={(e) => {
+                        /*onClick={(e) => {
                           if (hasSubSubmenu) {
                             e.stopPropagation();
                             handleSubSubmenuClick(subItem.node.id, e);
                           }
                         }}
+                        onMouseOut={(e) => {
+                          // Add the logic to handle mouse out here
+                          handleSubSubMouseOut(subItem.node.id, e);
+                        }}*/
+                        onMouseLeave={() => handleSubMouseLeave(subItem.node.id)}
+                        onMouseEnter={() => handleSubMouseEnter(subItem.node.id)}
                       >
                         {hasSubSubmenu ? (
               <>
