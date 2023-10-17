@@ -14,30 +14,27 @@ const Tourdetails = () => {
   
   return (
     <>
-      <section className="py-5 bg-gray-300 ">
-        <div className="container w-full mx-auto">
+     <section className="py-5 bg-gray-300 ">
+      <div className='flex items-center justify-center'>
+        <div className="container w-full mx-auto ">
+          <div className='text-center'>
           <h2 className="text-2xl font-semibold">Category products</h2>
-          <nav>
+          <nav className='flex justify-center'>
+          <ol className="flex items-center space-x-2 breadcrumb">
+            <li className="breadcrumb-item text-gray-200">
+              <a href="#">Home</a>
+            </li>
           
-            <ol className="flex items-center space-x-2 text-black breadcrumb">
-              <li className="breadcrumb-item">
-                <a href="#">Home</a>
-              </li>
-              <li>
+            <li>
               <span class="mx-2 text-neutral-500 dark:text-neutral-400">/</span>
-              </li>
-              <li className="breadcrumb-item">
-                <a href="#">Best category</a>
-              </li>
-              <li>
-              <span class="mx-2 text-neutral-500 dark:text-neutral-400">/</span>
-              </li>
-              <li className="breadcrumb-item active" aria-current="page">
-                Great articles
-              </li>
-            </ol>
-            
-          </nav>
+            </li>
+            <li className="breadcrumb-item active" aria-current="page">
+              Sea Tours
+            </li>
+          </ol>
+        </nav>
+        </div>
+        </div>
         </div>
       </section>
 
@@ -474,6 +471,30 @@ const Tourdetails = () => {
         salePrice="$499"
         promotionText="sale"
       />
+      <TourCard
+        imageUrl="https://images.freeimages.com/images/large-previews/1a0/sydney-opera-house-1476036.jpg" // Replace with your image URL
+        title="Tour 1"
+        description="Explore amazing destinations with our guided tours."
+        discountPrice="$599"
+        salePrice="$499"
+        promotionText="sale"
+      />
+       <TourCard
+        imageUrl="https://images.freeimages.com/images/large-previews/1a0/sydney-opera-house-1476036.jpg" // Replace with your image URL
+        title="Tour 1"
+        description="Explore amazing destinations with our guided tours."
+        discountPrice="$599"
+        salePrice="$499"
+        promotionText="sale"
+      />
+       <TourCard
+        imageUrl="https://images.freeimages.com/images/large-previews/1a0/sydney-opera-house-1476036.jpg" // Replace with your image URL
+        title="Tour 1"
+        description="Explore amazing destinations with our guided tours."
+        discountPrice="$599"
+        salePrice="$499"
+        promotionText="sale"
+      />
       {/* Add more TourCard components here if needed */}
     </div>
   ) : (
@@ -497,7 +518,7 @@ const Tourdetails = () => {
                  
           
 
-              <nav class="flex flex-row flex-nowrap justify-between md:justify-center items-center" aria-label="Pagination">
+              <nav class="flex flex-row flex-nowrap justify-between md:justify-center items-center py-5" aria-label="Pagination">
                 <a class="flex w-10 h-10 mr-1 justify-center items-center rounded-full border border-gray-200 bg-white text-black hover:border-gray-300" href="#" title="Previous Page">
                     <span class="sr-only">Previous Page</span>
                     <svg class="block w-4 h-4 fill-current" viewBox="0 0 256 512" aria-hidden="true" role="presentation">

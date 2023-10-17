@@ -5,7 +5,7 @@ import client from "@/src/apollo/client";
 import Tourdetails from '@/src/components/tour-details/Tourdetails';
 
 
-function Toureetails({data}) {
+function experiences({data}) {
   return (
     <div>
        <Layout data={data}>
@@ -20,7 +20,7 @@ function Toureetails({data}) {
 }
 
 
-export default Toureetails
+export default experiences
 export async function getStaticProps(context){
     const {data, loadng, networkStatus} = await client.query({
   

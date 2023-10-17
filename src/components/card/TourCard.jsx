@@ -31,7 +31,7 @@ const TourCard = ({ imageUrl, title, description, discountPrice, salePrice, prom
           {/* Price Badge version 2 */}
           <div className="absolute top-1/2 right-2 transform -translate-y-1/2 m-2 px-2 py-1 bg-indigo-600 text-white rounded">
         {/*<span className="line-through mr-1 text-sm">{discountPrice}</span> */}
-        <span className="text-lg font-semibold sm:top-2/3" >{salePrice}</span>
+         <span className="text-lg font-semibold sm:top-2/3" >{salePrice}</span>
       </div>
        
 
