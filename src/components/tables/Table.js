@@ -8,19 +8,19 @@ return (
 <div class="w-full overflow-x-auto">
 <table class="w-full table-auto table-fixed">
 <thead>
-<tr class="text-md font-semibold tracking-wide text-center text-gray-900 bg-gray-100 uppercase border-b border-gray-600">
-<th className="w-1/6 px-4 py-3">From</th>
-<th className="w-1/6 px-4 py-3">To</th>
-<th className="w-1/6 px-4 py-3">Price Private</th>
-<th className="w-1/6 px-4 py-3">Price Per Adult</th>
-<th className="w-1/6 px-4 py-3">Price Per Children</th>
-<th className="w-1/6 px-4 py-3">By</th>
+<tr class="text-md sm:text-sm font-semibold tracking-wide text-center text-gray-900 bg-gray-100 uppercase border-b border-gray-600">
+<th className="w-1/6 sm:w-1/6 px-4 py-3">From</th>
+<th className="w-1/6 sm:w-1/6  px-4 py-3">To</th>
+<th className="w-1/6 sm:w-1/6 px-4 py-3">Price Private</th>
+<th className="w-1/6 sm:w-1/6  px-4 py-3">Price Per Adult</th>
+<th className="w-1/6 sm:w-1/6  px-4 py-3">Price Per Children</th>
+<th className="w-1/6 sm:w-1/6 px-4 py-3">By</th>
 </tr>
 </thead>
 <tbody class="bg-white">
 <tr class="text-gray-700">
-<td class="px-4 py-3 border">
-<div class="flex items-center text-sm">
+<td class="px-4  py-3 border">
+<div class="flex items-center text-sm md:text-xs">
 <div class="relative w-8 h-8 mr-3 rounded-full md:block">
 <img class="object-cover w-full h-full rounded-full" src="https://images.pexels.com/photos/5212324/pexels-photo-5212324.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="" loading="lazy" />
 <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>

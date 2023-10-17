@@ -5,8 +5,8 @@ const TourCard = ({ imageUrl, title, description, discountPrice, salePrice, prom
 
    
        
-        
-    <div className="relative rounded-lg overflow-hidden shadow-lg">
+    <div className="container flex sm:flex justify-center items-center">   
+    <div className=" relative rounded-lg overflow-hidden shadow-lg">
       {/* Image */}
       <img src={imageUrl} alt={title} className="w-full h-56 object-cover" />
 
@@ -54,7 +54,7 @@ const TourCard = ({ imageUrl, title, description, discountPrice, salePrice, prom
         </button>
       </div>
    </div>
-  
+  </div>
 
   );
 };

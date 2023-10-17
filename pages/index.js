@@ -14,6 +14,8 @@ import TourDetailss from "@/src/components/tourcalculate/TourDetails";
 import Table from "@/src/components/tables/Table";
 import Herobanner from "@/src/components/hero";
 import DropdownMenu from "@/src/components/event/DropdownMouseOver";
+import ResponsiveTable from "@/src/components/tables/ResponsiveTable";
+import TB from "@/src/components/tables/TB";
 
 //const inter = Inter({ subsets: ['latin'] })
 
@@ -24,7 +26,7 @@ export default function Home({data}) {
    <Layout data={data}>
    <Herobanner />
     <section className="py-16 bg-gray-100">
-    
+    <div className="container">
     <div className="two alt-two">
         <h1>Alternate
     <span>Example Tagline Text</span>
@@ -67,17 +69,22 @@ export default function Home({data}) {
       />
       {/* Add more TourCard components with different data */}
       </div>
+      </div>
     </section>
 
       <section className="py-16 bg-gray-100">
-        <div className="px-5 two">
+        <div className="container">
+        <div className="px-12 two">
           <h1>Style Two
               <span>Example Tagline Text</span>
           </h1>
         </div>
-        <TourSlider className="px-5" />
+        <TourSlider />
+        </div>
       </section>
       <Table />
+      <ResponsiveTable />
+      <TB />
       <TourDetails />
       <TourPriceCalculator />
       <TourDetailss />
