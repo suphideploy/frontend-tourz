@@ -16,10 +16,14 @@ import Herobanner from "@/src/components/hero";
 import DropdownMenu from "@/src/components/event/DropdownMouseOver";
 import ResponsiveTable from "@/src/components/tables/ResponsiveTable";
 import TB from "@/src/components/tables/TB";
+import Card from "@/src/components/card";
 
 //const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({data}) {
+
+
+
 
 
   return (
@@ -82,9 +86,15 @@ export default function Home({data}) {
         <TourSlider />
         </div>
       </section>
+      
+        
+        <Card />
+        
+     
       <Table />
       <ResponsiveTable />
       <TB />
+    
       <TourDetails />
       <TourPriceCalculator />
       <TourDetailss />

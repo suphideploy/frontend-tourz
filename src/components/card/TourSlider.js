@@ -2,15 +2,27 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import TourCard from './TourCard';
 
+import TourCard from './TourCard';
+import { BsChevronDoubleLeft } from 'react-icons/bs';
+import { BsChevronDoubleRight } from 'react-icons/bs';
 const TourSlider = () => {
+  const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
+    <BsChevronDoubleLeft {...props} />
+  );
+
+  const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
+    <BsChevronDoubleRight {...props} />
+  );
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3, // Number of slides to show at once
     slidesToScroll: 1,
+    initialSlide: 0,
+    prevArrow: <SlickArrowLeft />,
+    nextArrow: <SlickArrowRight />,
     responsive: [
       {
         breakpoint: 1024,

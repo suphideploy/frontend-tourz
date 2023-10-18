@@ -11,7 +11,7 @@ function ImageSlider() {
 
   return (
      <>
-     
+       
         <Swiper
           loop={true}
           spaceBetween={10}
@@ -33,8 +33,7 @@ function ImageSlider() {
             <img src="https://swiperjs.com/demos/images/nature-4.jpg" alt="Nature 4" />
           </SwiperSlide>
         </Swiper>
-      
-    
+        
         <Swiper
           onSwiper={setThumbsSwiper}
           loop={true}
@@ -59,7 +58,7 @@ function ImageSlider() {
           </SwiperSlide>
         </Swiper>
      
-      </>
+       </>
   );
 }
 
