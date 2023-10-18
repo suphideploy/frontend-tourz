@@ -11,6 +11,9 @@ module.exports = {
 		 },
 
 		},
+		fontFamily: {
+			cabin: ['Cabin','sans-serif'],
+		},
 		extend: {
 			colors: {
 				border: "hsl(var(--border))",
@@ -52,6 +55,14 @@ module.exports = {
 				md: "calc(var(--radius) - 2px)",
 				sm: "calc(var(--radius) - 4px)",
 			  },
+			  maxHeight: {
+				'860': '860px',
+				'660': '660px',
+				'200' : '200px',
+			  },
+			  maxWidth: {
+				'900': '900px',
+			  }
 		},
 	},
 	variants: {},

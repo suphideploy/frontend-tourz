@@ -18,7 +18,7 @@ const Tourdetails = () => {
       <div className='flex items-center justify-center'>
         <div className="container w-full mx-auto ">
           <div className='text-center'>
-          <h2 className="text-2xl font-semibold">Category products</h2>
+          <h2 className="font-cabin text-2xl font-semibold">Category products</h2>
           <nav className='flex justify-center'>
           <ol className="flex items-center space-x-2 breadcrumb">
             <li className="breadcrumb-item text-gray-200">
@@ -405,7 +405,7 @@ const Tourdetails = () => {
 </div>
             </aside>
 
-            <main className="w-full px-4 md:w-3/4">
+            <main className="w-full px-4 md:w-3/4 py-2">
               <header className="flex items-center justify-between pb-3 mb-4 border-b">
                  <span>32 Items found</span>
                 <div className="flex items-center space-x-2">

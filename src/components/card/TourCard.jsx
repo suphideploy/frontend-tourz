@@ -39,7 +39,7 @@ const TourCard = ({ imageUrl, title, description, discountPrice, salePrice, prom
       <div>
       <div className="p-4">
         {/* Title */}
-        <h2 className="text-xl font-semibold ">{title}</h2>
+        <h2 className="font-cabin font-semibold">{title}</h2>
 
         {/* Description */}
         <p className="text-gray-700 my-2">{description}</p>

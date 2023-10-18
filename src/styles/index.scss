@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 @import "~tailwindcss/base";
 @import "~tailwindcss/components";
 @import "~tailwindcss/utilities";
@@ -5,11 +6,15 @@
 
 /* === Headline for Card === */
 
+h1,h2,h3,h4,h5,h6,span,p {
+  font-family: 'Cabin', sans-serif;
+}
+
 h1 {
     position: relative;
     padding: 0;
     margin: 0;
-    font-family: "Raleway", sans-serif;
+    font-family: 'Cabin', sans-serif;
     font-weight: 300;
     font-size: 40px;
     color: #080808;
@@ -30,6 +35,8 @@ h1 {
   /* === HEADING STYLE #2 === */
 .two h1 {
     text-transform: capitalize;
+    font-family: 'Cabin', sans-serif;
+    font-size: 32px;
   }
   .two h1:before {
     position: absolute;
@@ -80,6 +87,7 @@ h1 {
     padding: 0 20px;
 }
 .footer-col h4{
+     font-family: 'Cabin', sans-serif;
     font-size: 18px;
     color: #ffffff;
     text-transform: capitalize;

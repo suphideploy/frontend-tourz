@@ -18,7 +18,7 @@ function ImageSlider() {
           navigation={true}
           thumbs={{ swiper: thumbsSwiper }}
           modules={[FreeMode, Navigation, Thumbs]}
-          className="mySwiper2"
+          className="mySwiper2 max-h-660"
         >
           <SwiperSlide>
             <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="Nature 1" />
@@ -43,7 +43,7 @@ function ImageSlider() {
           freeMode={true}
           watchSlidesProgress={true}
           modules={[FreeMode, Navigation, Thumbs]}
-          className="mySwiper"
+          className="mySwiper mt-2 max-h-200"
         >
           <SwiperSlide>
             <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="Nature 1" />
@@ -58,7 +58,7 @@ function ImageSlider() {
             <img src="https://swiperjs.com/demos/images/nature-4.jpg" alt="Nature 4" />
           </SwiperSlide>
         </Swiper>
-     
+        
       </>
   );
 }

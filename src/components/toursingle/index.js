@@ -5,6 +5,8 @@ import Children from '@/public/children.png';
 import Baby from '@/public/baby.png';
 import ExtraContent from './ExtraContent/ExtraContent';
 import ImageSlider from './ImageSlider/ImageSlider';
+import TB from '../tables/TB';
+
 
 const TourSingle = () => {
     const [Accorditionopen, setAccorditionOpen] = useState(false);
@@ -30,17 +32,52 @@ const TourSingle = () => {
   
     ];
     return (
+      <>
+      <section className="py-5 bg-gray-300 ">
+      <div className='flex items-center justify-center'>
+        <div className="container w-full mx-auto ">
+          <div className='text-center'>
+          <h2 className="font-cabin text-2xl font-semibold">Phi Phi Island 1</h2>
+          <nav className='flex justify-center'>
+          <ol className="flex items-center space-x-2 breadcrumb">
+            <li className="breadcrumb-item text-gray-200">
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <span class="mx-2 text-neutral-500 dark:text-neutral-400">/</span>
+            </li>
+            <li className="breadcrumb-item text-gray-200 " aria-current="page">
+              Sea Tours
+            </li>
+          
+            <li>
+              <span class="mx-2 text-neutral-500 dark:text-neutral-400">/</span>
+            </li>
+            <li className="breadcrumb-item active" aria-current="page">
+              Phi Phi Islands 1
+            </li>
+          </ol>
+        </nav>
+        </div>
+        </div>
+        </div>
+      </section>
       <div className="container grid gap-8 mx-auto mt-4 grid-col-4 lg:grid-cols-3">
         {/* Tour Images Slider */}
         <div className="col-span-3 lg:col-span-2">
           {/* Add your image slider component here */}
-          <h1 className="mb-4 text-3xl font-semibold">Tour Name</h1>
+          {/*<h1 className="mb-4 text-3xl font-semibold">Tour Name</h1>*/}
+          <div className='container'>
           <div className='carousel'>
               <ImageSlider 
               />  
           </div>
+          </div>
+          <div className='mt-5'>
+            <TB />
+          </div>
           {/* Add Accordition */}
-           <div className='px-[0px] max-w-[1000px] py-24 mt-5'>
+           <div className='px-[0px] max-w-[1000px] mt-5'>
             {accordionData.map((data, index) => {
               return (
                 <ExtraContent 
@@ -57,11 +94,12 @@ const TourSingle = () => {
           {/* Other details like duration, highlights, activities, included, important information, what to bring */}
           {/* Add your details here */}
         </div>
+      
   
         
         {/* Booking Form */}
 
-  <div class="max-w-md mx-auto mt-10 shadow-lg rounded-lg overflow-hidden">
+  <div class="max-w-md mx-auto shadow-lg rounded-lg overflow-hidden lg:max-h-860"  >
     <div class="text-2xl py-4 px-6 bg-orange-700 hover:bg-orange-900 text-white text-center font-bold uppercase">
       Book an Appointment
     </div>
@@ -92,8 +130,8 @@ const TourSingle = () => {
         </div>
         
        
-    <div class="md:flex -mx-2">
-      <div class="md:w-1/2 px-2 mb-4">
+    <div class="md:flex -mx-2 ">
+      <div class="md:w-1/2 px-2 mb-4 ">
         <label class="block text-gray-700 font-bold mb-2" for="date">
           Date
         </label>
@@ -205,6 +243,7 @@ const TourSingle = () => {
   
     
       </div>
+      </>
     );
 
 
