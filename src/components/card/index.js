@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SlickSlider from './SlickSlider';
-import { render } from 'react-dom';
+
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 const dataTop = [

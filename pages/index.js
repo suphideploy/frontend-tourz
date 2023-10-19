@@ -1,9 +1,8 @@
-//import Image from 'next/image'
-//import { Inter } from 'next/font/google'
+
 
 import client from "@/src/apollo/client";
 import TourCard from "@/src/components/card/TourCard";
-import BookingForm from "@/src/components/booking/BookingForm";
+
 import Layout from "@/src/components/layouts";
 import Footer from "@/src/components/layouts/footer/Footer";
 import { GET_MENUS } from "@/src/queries/get-menus";
@@ -17,14 +16,12 @@ import DropdownMenu from "@/src/components/event/DropdownMouseOver";
 import ResponsiveTable from "@/src/components/tables/ResponsiveTable";
 import TB from "@/src/components/tables/TB";
 import Card from "@/src/components/card";
+import Cart from "@/src/components/cart/cartone/CartOne";
+import Carttwo from "@/src/components/cart/carttwo/CartTwo";
 
-//const inter = Inter({ subsets: ['latin'] })
+
 
 export default function Home({data}) {
-
-
-
-
 
   return (
    <Layout data={data}>
@@ -87,8 +84,14 @@ export default function Home({data}) {
         </div>
       </section>
       
+      <section className="py-14 bg-gray-100">
+        <div className="container">
         
         <Card />
+        </div>
+      </section>
+        
+       
         
      
       <Table />
@@ -100,6 +103,8 @@ export default function Home({data}) {
       <TourDetailss />
      {/*<BookingForm /> */}
     <DropdownMenu />
+    <Cart />
+    <Carttwo />
    </Layout>
   )
 }

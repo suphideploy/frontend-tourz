@@ -6,7 +6,7 @@ import Baby from '@/public/baby.png';
 import ExtraContent from './ExtraContent/ExtraContent';
 import ImageSlider from './ImageSlider/ImageSlider';
 import TB from '../tables/TB';
-
+import CardSlider from '../card';
 
 const TourSingle = () => {
     const [Accorditionopen, setAccorditionOpen] = useState(false);
@@ -33,7 +33,7 @@ const TourSingle = () => {
     ];
     return (
       <>
-      <section className="py-5 bg-gray-300 ">
+      <section className="py-5 bg-sky-400 ">
       <div className='flex items-center justify-center'>
         <div className="container w-full mx-auto ">
           <div className='text-center'>
@@ -44,14 +44,14 @@ const TourSingle = () => {
               <a href="#">Home</a>
             </li>
             <li>
-              <span class="mx-2 text-neutral-500 dark:text-neutral-400">/</span>
+              <span class="mx-2 text-slate-100 dark:text-slate-50">/</span>
             </li>
             <li className="text-gray-200 breadcrumb-item " aria-current="page">
               Sea Tours
             </li>
           
             <li>
-              <span class="mx-2 text-neutral-500 dark:text-neutral-400">/</span>
+              <span class="mx-2 text-slate-100 dark:text-slate-50">/</span>
             </li>
             <li className="breadcrumb-item active" aria-current="page">
               Phi Phi Islands 1
@@ -100,7 +100,7 @@ const TourSingle = () => {
         {/* Booking Form */}
         <div className='container flex-auto w-full md:w-32 '>
         <div class="max-w-md mx-auto mt-10 shadow-lg rounded-lg overflow-hidden bg-no-repeat bg-gradient-to-b from-orange-100 ">
-    <div class="md:text-2xl text-md py-4 px-6 bg-orange-700 hover:bg-orange-900 text-white text-center font-bold uppercase">
+    <div class="md:text-2xl text-md py-4 px-6 bg-blue-800 hover:bg-blue-900 text-white text-center font-bold uppercase">
         Book an Appointment
     </div>
     <form class="py-4 px-6" action="" method="POST">
@@ -232,20 +232,19 @@ const TourSingle = () => {
 
 
     </form>
-    <div class="md:text-2xl text-md py-4 px-6 bg-orange-700 hover:bg-orange-900 text-white text-center font-bold uppercase">
+    <div class="md:text-2xl text-md py-4 px-6  bg-blue-800 hover:bg-blue-900 text-white text-center font-bold uppercase">
         Book an Appointment
     </div>
+   </div>
+   
 </div>
-
-
-          
-        </div>
+</div>
+      <section className="py-10 ">
+        <div className="container">
         
-
-  
-  
-    
-      </div>
+        <CardSlider />
+        </div>
+      </section>  
       </>
     );
 

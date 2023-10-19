@@ -1,4 +1,4 @@
-import '../src/styles/slickslider.module.css';
+
 import client from '@/src/apollo/client';
 import '../src/styles/index.scss'
 import { ApolloProvider } from "@apollo/client";
