@@ -18,6 +18,8 @@ import TB from "@/src/components/tables/TB";
 import Card from "@/src/components/card";
 import Cart from "@/src/components/cart/cartone/CartOne";
 import Carttwo from "@/src/components/cart/carttwo/CartTwo";
+import FormRequest from "@/src/components/form/formrequest/FormRequest";
+import Gallary from "@/src/components/gallary/Gallary";
 
 
 
@@ -105,6 +107,8 @@ export default function Home({data}) {
     <DropdownMenu />
     <Cart />
     <Carttwo />
+    <FormRequest />
+    <Gallary />
    </Layout>
   )
 }

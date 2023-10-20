@@ -7,6 +7,7 @@ import ExtraContent from './ExtraContent/ExtraContent';
 import ImageSlider from './ImageSlider/ImageSlider';
 import TB from '../tables/TB';
 import CardSlider from '../card';
+import Gallary from '../gallary/Gallary';
 
 const TourSingle = () => {
     const [Accorditionopen, setAccorditionOpen] = useState(false);
@@ -91,6 +92,8 @@ const TourSingle = () => {
               );
             })}
            </div>
+          
+         
           {/* Other details like duration, highlights, activities, included, important information, what to bring */}
           {/* Add your details here */}
         </div>
@@ -180,7 +183,7 @@ const TourSingle = () => {
               <button className="px-4 py-2">-</button>
             </div>
           </div>
-
+          
          
           <div className="flex items-center w-full ml-0 md:w-1/2 ">
             <div>
@@ -239,6 +242,7 @@ const TourSingle = () => {
    
 </div>
 </div>
+<Gallary />
       <section className="py-10 ">
         <div className="container">
         

@@ -23,19 +23,19 @@ const HeaderTop = () => {
         <div className="text-gray-500 text-[12px]">
           TAKE ONLY <b>MEMORIES</b>,LEAVE ONLY <b>FOOTPRINTS</b>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4  ">
             <select
-              className="text-gray-500 text-[12px] w-[70px]"
+              className="currency text-gray-500 text-[12px] w-[70px] border-transparent"
               name="currency"
               id="currency"
             >
-              <option value="USD $">USD $</option>
-              <option value="EUR €">EUR €</option>
-              <option value="INR">INR</option>
+              <option value="USD $">USD</option>
+              <option value="EUR €">EUR</option>
+              <option value="INR">THB</option>
             </select>
 
             <select
-              className="text-gray-500 text-[12px] w-[80px]"
+              className="language text-gray-500 text-[12px] w-[80px] border-none"
               name="language"
               id="language"
             >
