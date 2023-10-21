@@ -23,6 +23,7 @@ import Gallary from "@/src/components/gallary/Gallary";
 
 
 
+
 export default function Home({data}) {
 
   return (
@@ -109,6 +110,7 @@ export default function Home({data}) {
     <Carttwo />
     <FormRequest />
     <Gallary />
+   
    </Layout>
   )
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import CustomerForm from '../customerform/CustomerForm';
 
 function FormRequest() {
  return (
@@ -88,11 +89,7 @@ function FormRequest() {
                 </form>
               </div>
               {/*Customer Information her */}
-              <div className="bg-white p-0 rounded-md shadow-md mt-5">
-                <div className="form-header text-center">
-                  <h1 className="font-cardo bg-sky-700 py-2 px-5 text-left font-bold text-2xl capitalize text-white">Customer Information</h1>
-                </div>
-                </div>
+                 <CustomerForm />
             </div>
             <div id="summary" className="w-1/4">
               <h1 className="font-semibold text-2xl">Order Summary</h1>
@@ -105,7 +102,7 @@ function FormRequest() {
                   <span>Total cost</span>
                   <span>THB 1200</span>
                 </div>
-                <button className="bg-sky-500 font-semibold hover:bg-sky-600 py-2 text-sm text-white uppercase w-full">Book Now</button>
+                <button className="bg-sky-500 font-semibold hover:bg-sky-600 py-2 text-sm text-white uppercase w-full">Submit a Request</button>
               </div>
             </div>
           </div>
